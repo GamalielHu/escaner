@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -223,7 +224,7 @@ private fun ExportBar(
     onExport: (ExportKind) -> Unit,
 ) {
     Surface(tonalElevation = 3.dp, shadowElevation = 8.dp) {
-        Column(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp)) {
+        Column(Modifier.fillMaxWidth().navigationBarsPadding().padding(horizontal = 16.dp, vertical = 10.dp)) {
             Text("Calidad de exportación", style = MaterialTheme.typography.labelMedium)
             Spacer(Modifier.height(6.dp))
             SingleChoiceSegmentedButtonRow(Modifier.fillMaxWidth()) {
